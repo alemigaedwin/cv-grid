@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: rgb(202, 202, 202);
+    width: 100%;
+    min-height: 100vh;
+    line-height: 1.8;
+    font-size: 17px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 25% 75%;    /* Sidebar: 25%, Main: 75% */
+    grid-gap: 20px;
+    margin: 60px;
+    align-items: start;
+}
+
+aside {
+    background-color: rgb(156, 250, 250);
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-right: 2px solid #95abf1;
+}
+
+main {
+    background-color: #fff;
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+section {
+    margin-bottom: 25px;
+}
+
+hr {
+    margin: 15px 0;
+}
+
+h1 {
+    margin-bottom: 8px;
+    font-size: 30px;
+}
+
+h2 {
+    font-size: 24px;
+    font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
+}
+
+h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.Last-Name {
+    color: rgb(1, 13, 63);
+}
+
+img {
+    width: 200px;
+    border: 4px solid blue;
+    border-radius: 20px;
+    padding: 5px;
+    display: block;
+    margin: 0 auto;
+}
+
+.pdf {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.download-button {
+    text-decoration: none;
+    background-color: rgb(190, 62, 12);
+    padding: 8px 25px;
+    border-radius: 8px;
+    font-size: 18px;
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+.download-button:hover {
+    font-size: 20px;
+    box-shadow: 0px 1px 20px rgba(2, 2, 92, 0.5);
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;   
+        margin: 20px;
+    }
+
+    body {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    img {
+        width: 150px;
+    }
+
+    .download-button {
+        font-size: 16px;
+        padding: 6px 18px;
+    }
+
+    aside .image {
+        order: 999;
+        margin-top: 20px;
+    }
+    aside {
+        border-right: none;
+        border-bottom: 2px solid #ccc;
+        padding-bottom: 2rem;
+        margin-bottom: 2rem;
+    }
+}
